@@ -60,6 +60,7 @@ xml`<plugin name="copy" version="0.7.6"
 javascript <<EOM
 liberator.globalVariables.copy_templates = [
   { label: 'titleAndURL',    value: '%TITLE%\n%URL%' },
+  { label: 'markdownLink',   value: '[%TITLE%](%URL%)' },
   { label: 'title',          value: '%TITLE%', map: ',y' },
   { label: 'anchor',         value: '<a href="%URL%">%TITLE%</a>' },
   { label: 'selanchor',      value: '<a href="%URL%" title="%TITLE%">%SEL%</a>' },
@@ -121,6 +122,7 @@ var copy_templates = [];
 if (!liberator.globalVariables.copy_templates){
     liberator.globalVariables.copy_templates = [
         { label: 'titleAndURL',    value: '%TITLE%\n%URL%' },
+        { label: 'markdownLink',   value: '[%TITLE%](%URL%)' },
         { label: 'title',          value: '%TITLE%' },
         { label: 'anchor',         value: '<a href="%URL%">%TITLE%</a>' },
         { label: 'selanchor',      value: '<a href="%URL%" title="%TITLE%">%SEL%</a>' },
